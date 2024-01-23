@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles7.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="https://media.licdn.com/dms/image/D5603AQH_oc5ho7aa6g/profile-displayphoto-shrink_400_400/0/1705608584438?e=1711584000&v=beta&t=EwAh4O2bLrsSKuQt5iTIgHAAGRoflkwlOnNPnlc8dDE">
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">Geography</a></li>
+          <li><a href="#css-questions">Geopolitics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">Geography</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                The country of India Lies in Northern Hemisphere. True or false.
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                Is New-Delhi the capital of India? True or False.
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">Geopolitics</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="customer">Do you like geopolitics?</label>
+            </div>
+            <div class="answer">
+              <select name="customer" id="customer" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-textarea">Do you have any questions:</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-textarea" name="css-questions" rows="5" cols="24" placeholder="Hi I am Raghuraj, my question is..."></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="https://sponzy.in">sponzy.in</a><br />
+        Jaipur<br />
+        Rajasthan<br />
+        India
+      </address>
+      <p>Made by Raghuraj Somani</p>
+    </footer>
+  </body>
+</html>
